@@ -1,17 +1,22 @@
-// La función recibe un arreglo con enteros entre 0 y 200.
-// Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
+
+// Agrega una propiedad al "objetoProducto" con el nombre "calcularPrecioDescuento".
+// Esta propiedad debe ser una función que multiplique el precio del producto por el porcentajeDeDescuento.
+// El "objetoProducto" posee una propiedad "precio" y una propiedad "porcentajeDeDescuento".
+// Luego debes restar del precio total del producto ese valor de descuento.
+// Retornar el precio final.
+// Ejemplo:
+// Precio ---> 10
+// PorcentajeDeDescuento ---> 0.2
+// Precio final ---> 8
 // Tu código:
 
-let array = [0, 25, 100, 140, 159, 199, 200]
 
-let arrayNuevo = []
-
-
-for(let i = 0; array[i] < 201; i++){
-
-   if(array[i] > 100){
-      arrayNuevo.push(array[i])
-   }
+var objetoProducto = {
+    precio: 100,
+    porcentajeDeDescuento: 0.10,
+    calcularPrecioDescuento: function(){
+        var preciofinal = this.precio * this.porcentajeDeDescuento;
+    },
 }
 
-console.log(arrayNuevo)
+console.log(objetoProducto.calcularPrecioDescuento())
