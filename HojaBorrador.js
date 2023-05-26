@@ -1,22 +1,17 @@
+function asAmirror(frase) {
+    // Recibes una frase. Tu tarea es retornar un nuevo string en el que el orden de las palabras sea el mismo.
+    // La diferencia es que cada palabra estará escrita al inverso.
+    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
+    // Tu código:
+    
+    var inver = 0;
 
-// Agrega una propiedad al "objetoProducto" con el nombre "calcularPrecioDescuento".
-// Esta propiedad debe ser una función que multiplique el precio del producto por el porcentajeDeDescuento.
-// El "objetoProducto" posee una propiedad "precio" y una propiedad "porcentajeDeDescuento".
-// Luego debes restar del precio total del producto ese valor de descuento.
-// Retornar el precio final.
-// Ejemplo:
-// Precio ---> 10
-// PorcentajeDeDescuento ---> 0.2
-// Precio final ---> 8
-// Tu código:
-
-
-var objetoProducto = {
-    precio: 100,
-    porcentajeDeDescuento: 0.10,
-    calcularPrecioDescuento: function(){
-        var preciofinal = this.precio * this.porcentajeDeDescuento;
-    },
+    for(let i = frase.length -1; i >= 0; i--){
+       inver = frase[i] + inver;
+    }
+    return inver;
 }
 
-console.log(objetoProducto.calcularPrecioDescuento())
+console.log(inver)
+
+
